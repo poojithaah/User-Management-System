@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Management</title>
+    
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>User Management System</h1>
+        <p style="text-align:center; color:gray; margin-bottom:20px;">
+            FastAPI CRUD Application with HTML, CSS and JavaScript
+        </p>
+
+        <div class="form-container">
+        <input type="number" id="id" placeholder="User ID">
+        
+        <input type="text" id="name" placeholder="User Name">
+        
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        
+        <button class="add-btn" onclick="addUser()">
+            Add User
+        </button>
+        <input type="text" id="searchInput" placeholder="Search user by name..." onkeyup="loadUsers()">
+        </div>
+        <div class="stats">
+            <h3>Total Users: <span id="userCount">0</span></h3>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="userTable">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
